@@ -6,4 +6,10 @@ defmodule RouteGenerator.Route do
     field :destination, :string
     timestamps()
   end
+
+  def changeset(route, params \\ %{}) do
+    route
+    |> Ecto.Changeset.cast(params, [:origin, :destination])
+    |> Ecto.Changeset.validate_required([:origin, :destination])
+  end
 end
