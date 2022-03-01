@@ -6,7 +6,7 @@ defmodule RouteGenerator.Route do
     field :destination, :string
     timestamps()
 
-    # has_many :route_components, RouteGenerator.RouteComponents
+    has_many :route_components, RouteGenerator.RouteComponents
   end
 
   def changeset(route, params \\ %{}) do
