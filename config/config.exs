@@ -1,9 +1,9 @@
 import Config
 
-config :friends, ecto_repos: [RouteGenerator.Repo]
+config :route_generator, ecto_repos: [RouteGenerator.Repo]
 
 config :route_generator, RouteGenerator.Repo,
-  database: "route_generator_repo",
-  username: "user",
-  password: "pass",
+  database: "route_generator",
+  username: "postgres",
+  password: "mysecretpassword",
   hostname: "localhost"
